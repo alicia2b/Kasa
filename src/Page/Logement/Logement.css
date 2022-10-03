@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Courgette&family=MonteCarlo&family=Permanent+Marker&display=swap');
+
+*{
+    font-family: 'montserrat';
+    color: #FF6060;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 40px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content p{
+    margin-block-start: 2.5em;
+    margin-block-end: 1em;
+    color: #FF6060;
+   
+
+}
+.content b{
+    color: #FF6060;
+    font-size: 28px;
+}
+.content img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+   background-color: #C4C4C4;
+}
+.host{
+    display: flex;
+    justify-content: flex-end;
+    top: -25px;
+    position: relative;
+
+}
+.host p{
+    right: 90px;
+    width: 80px;
+    color: #FF6060;
+    text-align: -webkit-right;
+}
+.tags{
+    display: flex;
+    justify-content: space-between;
+
+}
+.tags li{
+    justify-content: flex-start;
+    color:white;
+    background-color:#FF6060;
+    border-radius: 15px;
+    width: 150px;
+    line-height: 30px;
+
+        
+}
+.text,.equipments{
+    align-self: baseline;
+    background-color: #C4C4C4;
+    width: 50%;
+}
+
+svg{
+    width: 30px;
+    height: 30px;
+   fill:#C4C4C4;
+}

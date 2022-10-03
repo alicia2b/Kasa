@@ -1,0 +1,27 @@
+
+ul{
+    display: flex;
+    justify-content:flex-end;
+    color: #ff0000;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 0;
+    
+   
+}
+li{
+    margin: 10px;
+    font-size: 0.8em;
+   
+}
+.link{
+    text-decoration: none;
+    color:#FF6060;
+    font-weight: 500;
+   
+}
+@media screen and (max-width: 699px){
+    li{
+        font-size: 10px;
+    }
+}

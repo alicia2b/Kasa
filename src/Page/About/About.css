@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    margin: 0 50px;
+}
+.container{
+    margin: 20px 50px;
+}
+
+.about-block{
+    margin: 0 80px;
+}
+h1{
+   background-color: #FF6060;
+   color: white;
+   width: 100%;
+   margin: 0;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.vector{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: -80px;
+    rotate: 180deg;
+}
+
+.texte{
+    height: max-content;
+    background-color: #F6F6F6;
+    font-size: 1em;
+    padding: 5px 0;
+    overflow-wrap: break-word;
+}
+.nonexpanded{
+    visibility: collapse;
+    height: 0px;
+}
+
+@media screen and (max-width: 699px){
+    
+    body{
+        margin: 0 10px;
+    }
+    .container{
+        margin: 20px 50px;
+    }
+    .cover{
+        margin: 30px 30px;
+    }
+    .about-block{
+        margin: 0 30px;
+    }
+
+    .texte{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-self: baseline;
+    margin: 20px;
+    width: 90%;
+}
+
+.logo{
+    height: 50px;
+    width: 180px;
+}
+@media screen and (max-width: 699px){
+
+    .logo{
+        height: 30px;
+        width: 70px;
+    }
+    .container{
+        margin: 20px 30px;
+    }
+    
+}
