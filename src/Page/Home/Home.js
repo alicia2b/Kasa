@@ -4,36 +4,32 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import imgHome from "../../assets/ImgHome.jpg";
 import cardItems from "../../assets/logements";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-
-    const AppCard=()=>(
-      <div className="listCard">
+  const AppCard = () => (
+    <div className="listCard">
       {cardItems.map((item) => {
         return (
-          <Link to={`/logement/${item.id}`}>
-          <div className="card" key={item.id}>
-            <img  src={item.cover} alt={item.title} />
-            <b >{item.title}</b>
-          </div>
+          <Link key={item.id} to={`/logement/${item.id}`}>
+            <div className="card" key={item.id}>
+              <img src={item.cover} alt={item.title} />
+              <b>{item.title}</b>
+            </div>
           </Link>
         );
       })}
     </div>
-    
-    )
+  );
   return (
     <div>
       <Header />
       <div className="cover">
         <p>Chez vous, partout et ailleurs</p>
-        <img src={imgHome} alt="paysage" />
+        <img className="imgAccueil" src={imgHome} alt="paysage" />
       </div>
-      <AppCard/>
+      <AppCard />
       <Footer />
     </div>
-  
   );
-      
 }

@@ -3,17 +3,26 @@ import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar() {
+  
+
   return (
     <div className="nav-container">
       <nav>
         <ul>
           <li>
-            <NavLink className="link" to="/">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "activated" : "link")}
+            >
               ACCUEIL
             </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/about">
+            <NavLink
+              className={({ isActive }) => (isActive ? "activated" : "link")}
+              to="/about"
+              end
+            >
               A PROPOS
             </NavLink>
           </li>

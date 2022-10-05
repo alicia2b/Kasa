@@ -1,71 +1,75 @@
-import React, { useState, useParams } from "react";
-import { Link,useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../../components/header/header";
 import cardItems from "../../assets/logements";
 import "../Logement/Logement.css";
+import Vector from "../../assets/Vector.svg";
+import StarsColored from "../../components/starsColored";
+import Caroussel from "../../components/caroussel/carousel"
 
 export default function Logement() {
-  
-  let {id}  = useParams();
-  let location=useLocation();
-  function OneLogement() {
-    //const nbPictures = cardItems.length;
-    const [i, SetActiveStep] = useState(0);
-    const goToNextPicture = () => {
-      SetActiveStep((prevActiveStep) => prevActiveStep + 1);
-    };
+  const { id } = useParams();
+  const [item, setItem] = useState();
+  const [pictures, setPictures] = useState([]);
 
-    return (
-      <>
-      
-        <Header />
-        {cardItems.map((item) => {
-          return (
-            <Link to={`logement/${item.id}`}>
-            <div className="slider" key={item.id}>
-              <img src={item.pictures} alt=" item" />
+  useEffect(() => {
+    const foundItem = cardItems.find((c) => c.id === id);
+    setItem(foundItem);
+  }, []);
 
-              <div className="content">
-                <b>{item.title}</b>
-                <p>{item.location}</p>
-                <div className="host">
-                  <p>{item.host.name}</p>
-                  <img src={item.host.picture} alt="host "></img>
-                </div>
-                <div className="tags">
-                  <ul>
-                    <li>{item.tags}</li>
-                  </ul>
-                  <div className="NbRating">
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="text">{item.description} </div>
-                <div className="equipements">
-                  <ul>
-                    <li>{item.equipments}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            </Link>
-          );
-        })}
-      </>
-    );
+  if (!item) {
+    return <p>Pas d'item</p>;
   }
+
+  return (
+    <>
+      <Header />
+     {/*} <div className="slider" key={item.id}>
+        <img src={item.pictures[0]} alt=" item" />*/}
+        <Caroussel pictures={item.pictures}></Caroussel>
+        <div className="content">
+          <div className="bloc-left">
+            <div className="location">
+              <b>{item.title}</b>
+              <p>{item.location}</p>
+            </div>
+            <div className="tags">
+              <ul>
+                {item.tags.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="bloc-right">
+            <div className="NbRating">
+              <StarsColored rating={item.rating} />
+            </div>
+
+            <div className="host">
+              <p>{item.host.name}</p>
+              <img src={item.host.picture} alt="host " />
+            </div>
+          </div>
+        </div>
+
+        <div className="description">
+          <div className="text">
+            <h2>Description</h2>
+            <img className="vector" src={Vector} />
+            <div>{item.description}</div>
+          </div>
+          <div className="equipements">
+            <h2>Equipements</h2>
+            <img className="vector" src={Vector} />
+            <ul>
+              {item.equipments.map((e) => (
+                <li key={e}>{e}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+    </>
+  );
 }

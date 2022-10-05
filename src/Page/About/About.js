@@ -3,12 +3,11 @@ import { useState } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import imageAbout from "../../assets/imageAbout.jpg";
-import Vector from "../../assets/Vector.svg"
-import "./About.css"
+import imageAboutMobile from "../../assets/imageAboutMobile.jpg";
+import "./About.css";
+import Collapse from "../../components/collapse";
 
 export default function About() {
- 
-
   function AboutItems() {
     const Items = [
       {
@@ -40,34 +39,33 @@ export default function About() {
     return Items;
   }
   const Items = AboutItems();
-  
-  function HandleExpanded(props) {
-    const isExpanded=props.isExpanded;
-    if(isExpanded){
-      return 
-      
-    }
-    return
-    
-  }
+
   return (
     <div>
       <Header />
       <div className="cover">
-      <img src={imageAbout} alt="montagnes"></img>
+        <img className="desktop" src={imageAbout} alt="montagnes" />
+        <img className="mobile" src={imageAboutMobile} alt="montagnes"></img>
       </div>
       {Items.map((item) => {
-        return (
-          <div className="about-block" key={item.id}>
-            <div className="title" onClick={HandleExpanded}>
-              <h1 className="title" key={item.id}>{item.title}</h1>
-              <img className="vector" src={Vector}/>
-            </div>
-            <div className="texte" isExpanded={false} key={item.id}>{item.texte}</div>
-          </div>
-        );
+        return <Collapse texte={item.texte} />;
       })}
       <Footer />
     </div>
   );
 }
+
+/*<div className="about-block" key={item.id}>
+<div className="title">
+  <h1 id="title" key={item.id}>
+    {item.title}
+  </h1>
+  <img
+    className="vector"
+    src={Vector}
+  />
+</div>
+<div className="texte" key={item.id}>
+  {item.texte}
+</div>
+</div>*/

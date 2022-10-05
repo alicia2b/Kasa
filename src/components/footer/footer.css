@@ -9,3 +9,16 @@
     padding-top: 25px;
     height: 100px;
 }
+.footer-container img{
+    width: 100px;
+}
+.footer-container p{
+    color: white;
+}
+span{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}

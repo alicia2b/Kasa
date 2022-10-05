@@ -1,41 +1,45 @@
 
 .cover{
     display: flex;
-    margin: 0 50px 20px;
+    margin: 20px 0;
 }
 
-.cover img{
+.imgAccueil{
     width: 100%;
     height: 180px;
     filter: contrast(0.5);
     border-radius: 15px;
    
 }
-p{
+.cover p{
     font-family: 'montserrat';
     position: absolute;
     color: white;
+    font-family: 'montserrat';
+    position: absolute;
+    font-size: 30px;
+    z-index: 6;
 }
 .listCard{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content:center;
-   max-width: 1000px;
+   max-width: 1200px;
    background-color:#F6F6F6;
-   margin: 0 50px;
+   margin: 0 30px;
    border-radius: 15px;
     
 }
 .card{
-    align-items: end;
-    height: 230px;
-    width: 250px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 240px;
+    width: 260px;
     margin: 10px 20px;
     border-radius: 15px;
-    background-color: #FF6060;
-    object-fit: cover;
-  
+    background: rgb(255,96,96);
+    background: linear-gradient(180deg, rgba(255,96,96,1) 35%, rgba(13,9,12,0.5788690476190477) 100%);  
 }
 .card img{
     width: 100%;
@@ -44,21 +48,34 @@ p{
     object-fit: cover;
 }
 .card b{
-    position: relative;
-    top: -50px;
-    left: 10px;
+    position: absolute;
+    margin-bottom: 20px;
     color: white;
     font-size: 13px;
-    width: 65%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
-    font-weight: 400;
+    
 
 }
 
 @media screen and (max-width: 699px){
 
-    .cover img{
+    .imgAccueil{
         height: 100px;
+    
+    }
+    .listCard{
+        background-color: white;
+        margin:0 0;
+    }
+    .card{
+        height: 100%;
+         width: 100%;
+         margin: 10px 0px;
+    }
+    .cover p{
+        font-size: 16px;
+    width: 50%;
     }
 }

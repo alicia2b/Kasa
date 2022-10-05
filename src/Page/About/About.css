@@ -5,51 +5,64 @@ body{
 .container{
     margin: 20px 50px;
 }
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+
 
 .about-block{
-    margin: 0 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FF6060;
+    margin: 10px 80px;
+    color: #F6F6F6;
+}
+.title{
+    display: flex;
+  justify-content: flex-end;
+}
+.expanded{
+    visibility: collapse;
+    height: 0;
 }
 h1{
    background-color: #FF6060;
    color: white;
    width: 100%;
-   margin: 0;
-}
-.title{
-    display: flex;
-    justify-content: space-between;
-}
-.vector{
-    height: 30px;
-    width: 30px;
-    position: relative;
-    left: -80px;
-    rotate: 180deg;
 }
 
+
+.vector{
+height: 30px;
+width: 30px;
+position: absolute;
+rotate: 180deg;
+margin-left: 0px;
+align-self: self-end;
+cursor: pointer;
+padding-left: 20px;
+}
 .texte{
     height: max-content;
     background-color: #F6F6F6;
     font-size: 1em;
     padding: 5px 0;
-    overflow-wrap: break-word;
 }
-.nonexpanded{
-    visibility: collapse;
-    height: 0px;
-}
-
 @media screen and (max-width: 699px){
     
     body{
         margin: 0 10px;
     }
     .container{
-        margin: 20px 50px;
+        margin: 20px 10px;
     }
-    .cover{
-        margin: 30px 30px;
+    .Mobile{
+        display: block;
     }
+    
     .about-block{
         margin: 0 30px;
     }
