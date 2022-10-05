@@ -4,11 +4,12 @@ import Vector from "../assets/Vector.svg";
 
 export default function Collapse(props) {
   const [display, setDisplay] = useState("none");
+  const [isActive, setIsActive] = useState("");
   const [rotate, setRotate] = useState("180deg");
   const items = props.texte;
 
   function inputCollapse() {
-
+    setIsActive(isActive === "" ? "active" : "");
     setRotate(rotate === "180deg" ? "0deg" : "180deg");
     setDisplay(display === "block" ? "none" : "block");
   }
