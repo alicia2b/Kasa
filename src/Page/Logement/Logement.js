@@ -5,7 +5,8 @@ import cardItems from "../../assets/logements";
 import "../Logement/Logement.css";
 import Vector from "../../assets/Vector.svg";
 import StarsColored from "../../components/starsColored";
-import Caroussel from "../../components/caroussel/carousel"
+import Caroussel from "../../components/caroussel/carousel";
+import Collapse from "../../components/collapse";
 
 export default function Logement() {
   const { id } = useParams();
@@ -24,37 +25,38 @@ export default function Logement() {
   return (
     <>
       <Header />
-     {/*} <div className="slider" key={item.id}>
+      {/*} <div className="slider" key={item.id}>
         <img src={item.pictures[0]} alt=" item" />*/}
-        <Caroussel pictures={item.pictures}></Caroussel>
-        <div className="content">
-          <div className="bloc-left">
-            <div className="location">
-              <b>{item.title}</b>
-              <p>{item.location}</p>
-            </div>
-            <div className="tags">
-              <ul>
-                {item.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
+      <Caroussel pictures={item.pictures}></Caroussel>
+      <div className="content">
+        <div className="bloc-left">
+          <div className="location">
+            <b>{item.title}</b>
+            <p>{item.location}</p>
           </div>
-
-          <div className="bloc-right">
-            <div className="NbRating">
-              <StarsColored rating={item.rating} />
-            </div>
-
-            <div className="host">
-              <p>{item.host.name}</p>
-              <img src={item.host.picture} alt="host " />
-            </div>
+          <div className="tags">
+            <ul>
+              {item.tags.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="description">
+        <div className="bloc-right">
+          <div className="NbRating">
+            <StarsColored rating={item.rating} />
+          </div>
+
+          <div className="host">
+            <p>{item.host.name}</p>
+            <img src={item.host.picture} alt="host " />
+          </div>
+        </div>
+      </div>
+
+      <div className="description">
+        <Collapse texte={item.texte}/>
           <div className="text">
             <h2>Description</h2>
             <img className="vector" src={Vector} />
@@ -69,7 +71,8 @@ export default function Logement() {
               ))}
             </ul>
           </div>
-        </div>
+
+      </div>
     </>
   );
 }
