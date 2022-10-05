@@ -48,9 +48,9 @@ export default function Caroussel() {
               />
             )}
             {index === current && (
-              <span className="slider-image-number">
+              <strong className="image-number">
                 {current + 1}/{pictures.length}
-              </span>
+              </strong>
             )}
           </div>
         );

@@ -19,7 +19,9 @@ body{
     background-color: #FF6060;
     margin: 10px 80px;
     color: #F6F6F6;
+    border-radius: 10px
 }
+
 .title{
     display: flex;
   justify-content: flex-end;
@@ -28,13 +30,20 @@ body{
     visibility: collapse;
     height: 0;
 }
-h1{
-   background-color: #FF6060;
-   color: white;
-   width: 100%;
+button{
+width: 30px;
+    height: 30px;
+    display: flex;
+     align-self: self-end;
+    background: transparent;
+    position: absolute;
+    padding: -40px;
+    border: 0;
+
 }
-
-
+h1{
+    color: white;
+}
 .vector{
 height: 30px;
 width: 30px;
@@ -43,7 +52,7 @@ rotate: 180deg;
 margin-left: 0px;
 align-self: self-end;
 cursor: pointer;
-padding-left: 20px;
+margin-left: -40px;
 }
 .texte{
     height: max-content;

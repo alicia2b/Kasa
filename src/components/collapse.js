@@ -6,7 +6,6 @@ export default function Collapse(props) {
   const [display, setDisplay] = useState("none");
   const [isActive, setIsActive] = useState("");
   const [rotate, setRotate] = useState("180deg");
-  const items = props.texte;
 
   function inputCollapse() {
     setIsActive(isActive === "" ? "active" : "");
@@ -15,21 +14,25 @@ export default function Collapse(props) {
   }
 
   return (
-    <div className="about-block" key={props.id} onClick={inputCollapse}>
-      <h1 id="title"> {props.title}</h1>
-      <img
-        className="vector"
-        src={Vector}
-        style={{ rotate: `${rotate}` }}
-        alt="chevron"
-      />
-      <div
-        className={`texte ${isActive}`}
-        key={props.id}
-        style={{ display: `${display}` }}
-      >
-        {props.texte}
+    <>
+      <div className="about-block" onClick={inputCollapse}>
+        <h1 id="title">{props.title}</h1>
+        <button>
+          <img
+            className="vector"
+            src={Vector}
+            style={{ rotate: `${rotate}` }}
+            alt="chevron"
+          />
+        </button>
+        <div
+          className={`texte ${isActive}`}
+          key={props.id}
+          style={{ display: `${display}` }}
+        >
+          {props.texte}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -60,6 +60,7 @@ export default function Logement() {
           <div className="text">
             <h2>Description</h2>
             <img className="vector" src={Vector} />
+          
             <div>{item.description}</div>
           </div>
           <div className="equipements">

@@ -5,10 +5,7 @@ import Home from "./Page/Home/Home";
 import Logement from "./Page/Logement/Logement";
 import Error from "./Page/Error/Error";
 
-
 export default function App() {
-  let { id } = useParams();
-
   return (
     <BrowserRouter>
       <Routes>

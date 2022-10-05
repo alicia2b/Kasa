@@ -48,14 +48,16 @@ export default function About() {
         <img className="mobile" src={imageAboutMobile} alt="montagnes"></img>
       </div>
       {Items.map((item) => {
-        return <Collapse texte={item.texte} />;
-      })}
+        return(
+         <Collapse texte={item.texte} />
+        
+      )})}
       <Footer />
     </div>
   );
 }
 
-/*<div className="about-block" key={item.id}>
+{/*<div className="about-block" key={item.id}>
 <div className="title">
   <h1 id="title" key={item.id}>
     {item.title}
@@ -68,4 +70,4 @@ export default function About() {
 <div className="texte" key={item.id}>
   {item.texte}
 </div>
-</div>*/
+</div>*/}
