@@ -12,7 +12,7 @@ export default function Home() {
       {cardItems.map((item) => {
         return (
           <Link key={item.id} to={`/logement/${item.id}`}>
-            <div className="card" key={item.id}>
+            <div className="card">
               <img src={item.cover} alt={item.title} />
               <b>{item.title}</b>
             </div>

@@ -5,12 +5,14 @@ body{
 .container{
     margin: 20px 50px;
 }
+.cover img{
+   border-radius: 25px;
+   height: 200px;
+}
 .desktop{
     display: block;
 }
-.mobile{
-    display: none;
-}
+
 
 
 
@@ -22,6 +24,12 @@ body{
     }
     .container{
         margin: 20px 10px;
+    }
+    .cover img{
+  
+        height: 200px;
+    object-position: 80% 90%;
+    object-fit: cover;
     }
     .Mobile{
         display: block;

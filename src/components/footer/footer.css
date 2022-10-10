@@ -17,8 +17,10 @@
 }
 span{
     background-color: black;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    
     border-radius: 50%;
+    color: white;
+    margin-right: 5px;
     border: 1px solid white;
 }

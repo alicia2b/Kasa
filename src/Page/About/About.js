@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import imageAbout from "../../assets/imageAbout.jpg";
@@ -38,13 +39,34 @@ export default function About() {
     return Items;
   }
   const Items = AboutItems();
+  const [mode, setMode] = useState("desktop");
+  useEffect(() => {
+    if (window.innerWidth >= 699) {
+      setMode("desktop");
+    } else {
+      setMode("mobile");
+    }
+    window.addEventListener("resize", onResize);
+
+    function onResize() {
+      if (window.innerWidth >= 699 && mode === "mobile") {
+        setMode("desktop");
+      } if (window.innerWidth < 699 && mode==='desktop'){
+        setMode("mobile");
+      }
+    }
+  },[]);
+
 
   return (
     <div>
       <Header />
       <div className="cover">
-        <img className="desktop" src={imageAbout} alt="montagnes" />
-        <img className="mobile" src={imageAboutMobile} alt="montagnes"></img>
+        <img
+          className={mode}
+          src={mode === "mobile" ? imageAboutMobile : imageAbout}
+          alt="montagnes"
+        />
       </div>
       {Items.map((item) => {
         return <Collapse title={item.title} texte={item.texte} key={item.id} />;
@@ -52,21 +74,4 @@ export default function About() {
       <Footer />
     </div>
   );
-}
-
-{
-  /*<div className="about-block" key={item.id}>
-<div className="title">
-  <h1 id="title" key={item.id}>
-    {item.title}
-  </h1>
-  <img
-    className="vector"
-    src={Vector}
-  />
-</div>
-<div className="texte" key={item.id}>
-  {item.texte}
-</div>
-</div>*/
 }

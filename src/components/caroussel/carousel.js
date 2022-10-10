@@ -31,10 +31,10 @@ export default function Caroussel() {
     <div className="slider">
       {/* Showing slider navigation buttons */}
       <button className="vectorPrev">
-        <img src={Vector} onClick={prevSlide} />
+        <img src={Vector} onClick={prevSlide} alt="fleche" />
       </button>
       <button className="vectorNext">
-        <img src={Vector} onClick={nextSlide} />
+        <img src={Vector} onClick={nextSlide} alt="fleche" />
       </button>
       {/* Images */}
       {pictures.map((img, index) => {

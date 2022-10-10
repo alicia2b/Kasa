@@ -1,7 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import cardItems from "../assets/logements";
+
 
 export default function StarsColored(props) {
   let nbStars = props.rating;

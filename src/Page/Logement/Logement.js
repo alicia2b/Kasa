@@ -5,7 +5,7 @@ import cardItems from "../../assets/logements";
 import "../Logement/Logement.css";
 import StarsColored from "../../components/starsColored";
 import Caroussel from "../../components/caroussel/carousel";
-import Collapse from "../../components/collapse/collapse";
+import Collapse from "../../components/collapse/collapse"
 import Error from "../Error/Error";
 import Footer from "../../components/footer/footer";
 export default function Logement() {
@@ -14,11 +14,10 @@ export default function Logement() {
 
   useEffect(() => {
     const foundItem = cardItems.find((c) => c.id === id);
-    // redirect si foundItem is undefined
-
+   
     setItem(foundItem);
   }, []);
-
+   // redirect si foundItem is undefined
   if (!item) {
     return <Error />;
   }

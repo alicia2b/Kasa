@@ -11,27 +11,24 @@
 }
 
 
-.vectorNext{
+.vectorNext, .vectorPrev{
     height: 30px;
     width: 30px;
     position: absolute;
-    rotate: 90deg;
     cursor: pointer;
-    top: 50%;
-    transform: translateX(50%);
+    top: 50%; 
+   
+}
+.vectorNext{
+  
     right: 0;
-    
+    rotate: 90deg;
 }
 .vectorPrev{
-    height: 30px;
-    width: 30px;
     position: absolute;
     rotate: -90deg;
     margin-left: 0px;
-    align-self: flex-start;
-    cursor: pointer;
-    top: 50%;
-    transform: translateX(-50%);
+   
 }
 
 .image-number{

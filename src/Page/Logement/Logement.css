@@ -124,9 +124,7 @@ svg{
 
 @media screen and (max-width: 890px){
    
-    .slider{
-        margin: 0 20px;
-    }
+
     .content{
         margin: 0;
         flex-direction: column;
