@@ -65,6 +65,7 @@ img{
     border-radius: 10px;
     width: 115px;
     padding: 5px 5px;
+    margin: 5px 5px;
     text-align: center;
 
         
@@ -150,8 +151,7 @@ svg{
     
     .tags li{
         width: 115px;
-        padding: 0px 0px;
-        margin: 0 5px;
+        
     }
  
 
