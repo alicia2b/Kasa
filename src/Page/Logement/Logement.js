@@ -5,7 +5,7 @@ import cardItems from "../../assets/logements";
 import "../Logement/Logement.css";
 import StarsColored from "../../components/starsColored";
 import Caroussel from "../../components/caroussel/carousel";
-import Collapse from "../../components/collapse/collapse"
+import Collapse from "../../components/collapse/collapse";
 import Error from "../Error/Error";
 import Footer from "../../components/footer/footer";
 export default function Logement() {
@@ -14,10 +14,10 @@ export default function Logement() {
 
   useEffect(() => {
     const foundItem = cardItems.find((c) => c.id === id);
-   
+
     setItem(foundItem);
   }, []);
-   // redirect si foundItem is undefined
+  // redirect si foundItem is undefined
   if (!item) {
     return <Error />;
   }
@@ -43,13 +43,13 @@ export default function Logement() {
         </div>
 
         <div className="bloc-right">
-          <div className="NbRating">
-            <StarsColored rating={item.rating} />
+          <div className="NbRating" >
+            <StarsColored  rating={item.rating} />
           </div>
 
           <div className="host">
             <p>{item.host.name}</p>
-            <img src={item.host.picture} alt="host " />
+            <img src={item.host.picture} alt="host" />
           </div>
         </div>
       </div>

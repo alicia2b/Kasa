@@ -71,9 +71,10 @@ img{
 }
 .description{
     display: flex;
+    margin: 10px;
 }
 .description div{
-    margin: 10px;
+   
     flex: 1 1 0px
 }
 
@@ -149,7 +150,8 @@ svg{
     
     .tags li{
         width: 115px;
-        padding: 5px 5px;
+        padding: 0px 0px;
+        margin: 0 5px;
     }
  
 

@@ -7,14 +7,12 @@ body{
 }
 .cover img{
    border-radius: 25px;
-   height: 200px;
+   height: 250px;
+   
 }
 .desktop{
     display: block;
 }
-
-
-
 
 
 @media screen and (max-width: 699px){
@@ -26,10 +24,7 @@ body{
         margin: 20px 10px;
     }
     .cover img{
-  
-        height: 200px;
-    object-position: 80% 90%;
-    object-fit: cover;
+        height: 250px;
     }
     .Mobile{
         display: block;
@@ -39,7 +34,5 @@ body{
         margin: 0 30px;
     }
 
-    .texte{
-        font-size: 12px;
-    }
+  
 }

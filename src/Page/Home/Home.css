@@ -17,6 +17,7 @@
     position: absolute;
     color: white;
     font-size: 34px;
+    transform: translate(10px, 50px);
     z-index: 6;
 }
 .listCard{
@@ -49,9 +50,9 @@
 }
 .card b{
     position: absolute;
-    margin-bottom: 20px;
+    margin: 10px;
     color: white;
-    font-size: 13px;
+    font-size: 18px;
     width: 20%;
     display: flex;
     flex-wrap: wrap;
@@ -77,9 +78,14 @@
     .card b{
         width: 40%;
     }
+    
+    .cover{
+        justify-content: flex-start;
+
+    }
     .cover p{
-        transform: translate(10%, 50%);
-        font-size: 16px;
+       
+        font-size: 25px;
     width: 50%;
     }
 }

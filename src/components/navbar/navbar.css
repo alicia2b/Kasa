@@ -9,9 +9,10 @@ ul{
     
    
 }
-li{
+nav li{
     margin: 10px;
     font-size: 0.8em;
+    font-size: 25px;
    
 }
 .link{
