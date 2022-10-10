@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Vector from "../assets/Vector.svg";
+import "./collapse.css";
 
 export default function Collapse(props) {
   const [display, setDisplay] = useState("none");
@@ -14,8 +15,8 @@ export default function Collapse(props) {
   }
 
   return (
-    <>
-      <div className="about-block" onClick={inputCollapse}>
+    <div>
+      <div className="collapse-block" onClick={inputCollapse}>
         <h1 id="title">{props.title}</h1>
         <button>
           <img
@@ -25,14 +26,14 @@ export default function Collapse(props) {
             alt="chevron"
           />
         </button>
-        <div
-          className={`texte ${isActive}`}
-          key={props.id}
-          style={{ display: `${display}` }}
-        >
-          {props.texte}
-        </div>
       </div>
-    </>
+      <div
+        className={`texte ${isActive}`}
+        key={props.id}
+        style={{ display: `${display}` }}
+      >
+        {props.texte}
+      </div>
+    </div>
   );
 }

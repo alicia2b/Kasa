@@ -57,6 +57,7 @@ img{
     flex-wrap: wrap;
 
 }
+
 .tags li{
     justify-content: flex-start;
     color:white;
@@ -69,11 +70,18 @@ img{
         
 }
 .description{
-    display:flex ;
+    display: flex;
+}
+.description div{
+    margin: 10px;
+    flex: 1 1 0px
 }
 
 .text div, .equipements ul{
     background-color: #F6F6F6;
+}
+.texte li{
+    list-style: none;
 }
 .equipements,.text{
     display: flex;
@@ -137,8 +145,10 @@ svg{
     }
     .tags ul{
         justify-content: flex-start;
-        width: 100%;
-    }
+        width: max-content;
+        flex-wrap: wrap;
+        }
+    
     .tags li{
         width: 115px;
         padding: 5px 5px;

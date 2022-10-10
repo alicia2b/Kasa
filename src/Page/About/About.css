@@ -13,53 +13,8 @@ body{
 }
 
 
-.about-block{
-    display: flex;
-    flex-direction: column;
-    background-color: #FF6060;
-    margin: 10px 80px;
-    color: #F6F6F6;
-    border-radius: 10px
-}
 
-.title{
-    display: flex;
-  justify-content: flex-end;
-}
-.expanded{
-    visibility: collapse;
-    height: 0;
-}
-button{
-width: 30px;
-    height: 30px;
-    display: flex;
-     align-self: self-end;
-    background: transparent;
-    position: absolute;
-    padding: -40px;
-    border: 0;
 
-}
-h1{
-    color: white;
-}
-.vector{
-height: 30px;
-width: 30px;
-position: absolute;
-rotate: 180deg;
-margin-left: 0px;
-align-self: self-end;
-cursor: pointer;
-margin-left: -40px;
-}
-.texte{
-    height: max-content;
-    background-color: #F6F6F6;
-    font-size: 1em;
-    padding: 5px 0;
-}
 @media screen and (max-width: 699px){
     
     body{

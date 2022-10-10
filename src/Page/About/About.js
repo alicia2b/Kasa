@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import imageAbout from "../../assets/imageAbout.jpg";
 import imageAboutMobile from "../../assets/imageAboutMobile.jpg";
 import "./About.css";
-import Collapse from "../../components/collapse";
+import Collapse from "../../components/collapse/collapse";
 
 export default function About() {
   function AboutItems() {
@@ -48,16 +47,15 @@ export default function About() {
         <img className="mobile" src={imageAboutMobile} alt="montagnes"></img>
       </div>
       {Items.map((item) => {
-        return(
-         <Collapse texte={item.texte} />
-        
-      )})}
+        return <Collapse title={item.title} texte={item.texte} key={item.id} />;
+      })}
       <Footer />
     </div>
   );
 }
 
-{/*<div className="about-block" key={item.id}>
+{
+  /*<div className="about-block" key={item.id}>
 <div className="title">
   <h1 id="title" key={item.id}>
     {item.title}
@@ -70,4 +68,5 @@ export default function About() {
 <div className="texte" key={item.id}>
   {item.texte}
 </div>
-</div>*/}
+</div>*/
+}

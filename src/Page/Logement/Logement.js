@@ -3,30 +3,30 @@ import { useParams } from "react-router-dom";
 import Header from "../../components/header/header";
 import cardItems from "../../assets/logements";
 import "../Logement/Logement.css";
-import Vector from "../../assets/Vector.svg";
 import StarsColored from "../../components/starsColored";
 import Caroussel from "../../components/caroussel/carousel";
-import Collapse from "../../components/collapse";
-
+import Collapse from "../../components/collapse/collapse";
+import Error from "../Error/Error";
+import Footer from "../../components/footer/footer";
 export default function Logement() {
   const { id } = useParams();
   const [item, setItem] = useState();
-  const [pictures, setPictures] = useState([]);
 
   useEffect(() => {
     const foundItem = cardItems.find((c) => c.id === id);
+    // redirect si foundItem is undefined
+
     setItem(foundItem);
   }, []);
 
   if (!item) {
-    return <p>Pas d'item</p>;
+    return <Error />;
   }
 
+  const listeEquipements = item.equipments.map((e) => <li key={e}>{e}</li>);
   return (
     <>
       <Header />
-      {/*} <div className="slider" key={item.id}>
-        <img src={item.pictures[0]} alt=" item" />*/}
       <Caroussel pictures={item.pictures}></Caroussel>
       <div className="content">
         <div className="bloc-left">
@@ -56,24 +56,10 @@ export default function Logement() {
       </div>
 
       <div className="description">
-        <Collapse texte={item.texte}/>
-          <div className="text">
-            <h2>Description</h2>
-            <img className="vector" src={Vector} />
-          
-            <div>{item.description}</div>
-          </div>
-          <div className="equipements">
-            <h2>Equipements</h2>
-            <img className="vector" src={Vector} />
-            <ul>
-              {item.equipments.map((e) => (
-                <li key={e}>{e}</li>
-              ))}
-            </ul>
-          </div>
-
+        <Collapse texte={item.description} title="Description" />
+        <Collapse texte={listeEquipements} title="Equipements" />
       </div>
+      <Footer />
     </>
   );
 }
