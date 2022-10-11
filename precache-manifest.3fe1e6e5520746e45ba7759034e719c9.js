@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f0de9643996783e4b23a",
-    "url": "/Kasa/static/css/main.08f0cb93.chunk.css"
+    "revision": "204c311d677b756d4e82",
+    "url": "/Kasa/static/css/main.93ab4502.chunk.css"
   },
   {
-    "revision": "f0de9643996783e4b23a",
-    "url": "/Kasa/static/js/main.f0de9643.chunk.js"
+    "revision": "204c311d677b756d4e82",
+    "url": "/Kasa/static/js/main.204c311d.chunk.js"
   },
   {
-    "revision": "d6ad0681366502a3b3ea",
-    "url": "/Kasa/static/js/1.d6ad0681.chunk.js"
+    "revision": "97bc1625e33b04eb7828",
+    "url": "/Kasa/static/js/1.97bc1625.chunk.js"
   },
   {
-    "revision": "a44e1e7d8a85734529d0",
-    "url": "/Kasa/static/js/2.a44e1e7d.chunk.js"
+    "revision": "ee4a04237a47a007a157",
+    "url": "/Kasa/static/js/2.ee4a0423.chunk.js"
   },
   {
-    "revision": "04f681fddb41486b724c",
-    "url": "/Kasa/static/js/runtime~main.04f681fd.js"
+    "revision": "74e563501856709c37ed",
+    "url": "/Kasa/static/js/runtime~main.74e56350.js"
   },
   {
     "revision": "97f2cc2442ac5b27d6670a938c74235a",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/Kasa/static/media/ImgHome.b78c1aba.jpg"
   },
   {
-    "revision": "6ccafa3d41f9015a85ed8437d44090ae",
+    "revision": "36ebf56c7e592860237f39f525c892f2",
     "url": "/Kasa/index.html"
   }
 ];
