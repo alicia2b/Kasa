@@ -129,6 +129,9 @@ svg{
     body{
         margin: 0 20px;
     }
+    .host p{
+        width: 50px;
+    }
 
     .content{
         margin: 0;
