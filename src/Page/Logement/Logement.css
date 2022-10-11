@@ -126,6 +126,9 @@ svg{
 
 @media screen and (max-width: 890px){
    
+    body{
+        margin: 0 20px;
+    }
 
     .content{
         margin: 0;
