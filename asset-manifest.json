@@ -1,7 +1,7 @@
 {
   "main.css": "/Kasa/static/css/main.0c0240ac.chunk.css",
-  "main.js": "/Kasa/static/js/main.1c53aa9f.chunk.js",
-  "main.js.map": "/Kasa/static/js/main.1c53aa9f.chunk.js.map",
+  "main.js": "/Kasa/static/js/main.842a1244.chunk.js",
+  "main.js.map": "/Kasa/static/js/main.842a1244.chunk.js.map",
   "static/js/1.97bc1625.chunk.js": "/Kasa/static/js/1.97bc1625.chunk.js",
   "static/js/1.97bc1625.chunk.js.map": "/Kasa/static/js/1.97bc1625.chunk.js.map",
   "static/js/2.ee4a0423.chunk.js": "/Kasa/static/js/2.ee4a0423.chunk.js",
@@ -16,6 +16,6 @@
   "static/media/ImgHome.jpg": "/Kasa/static/media/ImgHome.b78c1aba.jpg",
   "static/css/main.0c0240ac.chunk.css.map": "/Kasa/static/css/main.0c0240ac.chunk.css.map",
   "index.html": "/Kasa/index.html",
-  "precache-manifest.86f79b58f174b990b6ef6467a08fc278.js": "/Kasa/precache-manifest.86f79b58f174b990b6ef6467a08fc278.js",
+  "precache-manifest.2ef90ebe801339329add3c339c7bfb15.js": "/Kasa/precache-manifest.2ef90ebe801339329add3c339c7bfb15.js",
   "service-worker.js": "/Kasa/service-worker.js"
 }
